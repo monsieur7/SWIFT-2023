@@ -7,17 +7,20 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell,UITableViewDataSource {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
+    @IBAction func CheckMark(_ sender: Any) {   }
+    @IBOutlet weak var LabelTitle: UILabel!
+    @IBOutlet weak var label_description: UILabel!
+    
 }
