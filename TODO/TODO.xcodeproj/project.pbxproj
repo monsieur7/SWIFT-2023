@@ -14,6 +14,7 @@
 		8479ACEA2B163452007FB310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479ACE92B163452007FB310 /* Assets.xcassets */; };
 		8479ACED2B163452007FB310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479ACEB2B163452007FB310 /* LaunchScreen.storyboard */; };
 		8479ACF72B1635C2007FB310 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479ACF62B1635C2007FB310 /* Todo.swift */; };
+		B6174F932B163BCF00CF7A26 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6174F922B163BCF00CF7A26 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8479ACEC2B163452007FB310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8479ACEE2B163452007FB310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8479ACF62B1635C2007FB310 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		B6174F922B163BCF00CF7A26 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8479ACEB2B163452007FB310 /* LaunchScreen.storyboard */,
 				8479ACEE2B163452007FB310 /* Info.plist */,
 				8479ACF62B1635C2007FB310 /* Todo.swift */,
+				B6174F922B163BCF00CF7A26 /* TableViewCell.swift */,
 			);
 			path = TODO;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6174F932B163BCF00CF7A26 /* TableViewCell.swift in Sources */,
 				8479ACE52B16344B007FB310 /* ViewController.swift in Sources */,
 				8479ACE12B16344B007FB310 /* AppDelegate.swift in Sources */,
 				8479ACE32B16344B007FB310 /* SceneDelegate.swift in Sources */,
