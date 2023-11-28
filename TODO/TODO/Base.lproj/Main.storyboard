@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="beY-Rz-MRc" customClass="TableViewCell" customModule="TODO" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ID" id="beY-Rz-MRc" customClass="TableViewCell" customModule="TODO" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="341" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beY-Rz-MRc" id="ZLV-vM-JHp">
@@ -51,16 +51,12 @@
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="CheckMark:" destination="beY-Rz-MRc" eventType="touchUpInside" id="ijW-NF-i41"/>
-                                                        <action selector="button:" destination="beY-Rz-MRc" eventType="touchUpInside" id="5Ja-Pn-7v2"/>
-                                                        <action selector="label:" destination="beY-Rz-MRc" eventType="touchUpInside" id="jCn-Q5-EnU"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="LabelTitle" destination="Sll-ZL-mQl" id="oqR-Ia-1xo"/>
-                                            <outlet property="Label_Desc" destination="euH-X1-z8h" id="6Be-IR-FoO"/>
-                                            <outlet property="label" destination="Sll-ZL-mQl" id="QHR-2B-2sz"/>
                                             <outlet property="label_description" destination="euH-X1-z8h" id="pDO-ND-Gs9"/>
                                         </connections>
                                     </tableViewCell>
