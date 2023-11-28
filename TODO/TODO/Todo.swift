@@ -15,11 +15,29 @@ class Todo {
     var title: String;
     var description: String;
     var type: TodoType;
+    var date:Date;
+    var dueDate:Date;
+    var done:Bool;
+    var id:String;
     init(){
-        title = "";
-        description = "";
-        type = TodoType.DEVOIRS;
+        self.title = "";
+        self.description = "";
+        self.type = TodoType.DEVOIRS;
+        self.date = Date();
+        self.dueDate = Date(timeIntervalSinceNow: 3600*24);
+        self.done = false;
+        self.id = UUID().uuidString;
     }
+    init(title:String, description:String, type:TodoType, dueDate:Date, date:Date){
+        self.title = title;
+        self.description = description;
+        self.type = type;
+        self.id = UUID().uuidString;
+        self.date = date;
+        self.dueDate = dueDate;
+        self.done = false;
+    }
+    
     
     
     
