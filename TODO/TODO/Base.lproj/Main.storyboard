@@ -45,15 +45,22 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLs-XR-KxH">
                                                     <rect key="frame" x="275" y="6" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" image="YES"/>
+                                                    </accessibility>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="CheckMark:" destination="beY-Rz-MRc" eventType="touchUpInside" id="ijW-NF-i41"/>
+                                                        <action selector="button:" destination="beY-Rz-MRc" eventType="touchUpInside" id="5Ja-Pn-7v2"/>
+                                                        <action selector="label:" destination="beY-Rz-MRc" eventType="touchUpInside" id="jCn-Q5-EnU"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="LabelTitle" destination="Sll-ZL-mQl" id="oqR-Ia-1xo"/>
+                                            <outlet property="Label_Desc" destination="euH-X1-z8h" id="6Be-IR-FoO"/>
+                                            <outlet property="label" destination="Sll-ZL-mQl" id="QHR-2B-2sz"/>
                                             <outlet property="label_description" destination="euH-X1-z8h" id="pDO-ND-Gs9"/>
                                         </connections>
                                     </tableViewCell>

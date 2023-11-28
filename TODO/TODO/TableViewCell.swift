@@ -7,7 +7,11 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell,UITableViewDataSource {
+class TableViewCell: UITableViewCell {
+
+    
+
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +22,7 @@ class TableViewCell: UITableViewCell,UITableViewDataSource {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
 
     @IBAction func CheckMark(_ sender: Any) {   }
     @IBOutlet weak var LabelTitle: UILabel!
