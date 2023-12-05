@@ -6,11 +6,11 @@
 //
 
 import Foundation
-enum TodoType {
+enum TodoType: String, Codable {
     case DEVOIRS;
     
 }
-class Todo {
+class Todo : Codable{
     
     var title: String;
     var description: String;

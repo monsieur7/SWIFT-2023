@@ -49,12 +49,13 @@
                                                     </accessibility>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="CheckMark:" destination="beY-Rz-MRc" eventType="touchUpInside" id="ijW-NF-i41"/>
+                                                        <action selector="ButtonDone:" destination="beY-Rz-MRc" eventType="touchDown" id="JEn-6V-7M0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="Button" destination="pLs-XR-KxH" id="ShY-pp-SR8"/>
                                             <outlet property="LabelTitle" destination="Sll-ZL-mQl" id="oqR-Ia-1xo"/>
                                             <outlet property="label_description" destination="euH-X1-z8h" id="pDO-ND-Gs9"/>
                                         </connections>

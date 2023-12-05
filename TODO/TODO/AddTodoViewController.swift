@@ -31,8 +31,29 @@ class AddTodoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ShowTodo"){
             let mainViewController = segue.destination as? ViewController;
+            
+            
+            
             let dataToAdd = Todo(title: TitleOutlet.text ?? "" , description: "", type: TodoType.DEVOIRS, dueDate: DueDate.date, date: Date());
-            mainViewController?.data.append(dataToAdd);
+            
+            var data:[Todo] = [];
+            
+            if let encodedData = UserDefaults.standard.data(forKey: "TodoDatas") {
+                do {
+                    let decodedData = try JSONDecoder().decode([Todo].self, from: encodedData)
+                    data = decodedData
+                } catch {
+                    print("Error decoding data: \(error)")
+                }
+            }
+            
+            data.append(dataToAdd);
+            do {
+                let encodedData = try JSONEncoder().encode(data)
+                UserDefaults.standard.set(encodedData, forKey: "TodoDatas"); //save data to database
+            } catch {
+                print("Error encoding data: \(error)")
+            }
         }
     
     }
