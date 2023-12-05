@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(data.count)
     }
@@ -46,24 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell;
     }
     
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) {
-        cellHighlighted = true;
-        if(cellHighlighted == true){
-            cellHighlightedIndex  = indexPath.row;
-        }
-        
-        //activate delete button 
-        
-        
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
-        cellHighlighted = false;
-        
-        //desactivate button (delete)
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,14 +61,15 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
         }
         self.tableview.dataSource = self;
+        self.tableview.delegate = self;
     }
 
     
     
     @IBOutlet weak var tableview: UITableView!
+   
     var data:[Todo] = []
-    var cellHighlighted = false;
-    var cellHighlightedIndex = 0;
-    
+ 
+   
 }
 
