@@ -10,6 +10,7 @@ import UIKit
 class TableViewCell: UITableViewCell {
 
     
+    var buttonClickedHandler: (() -> Void)? // closure
 
     
 
@@ -24,8 +25,14 @@ class TableViewCell: UITableViewCell {
     }
     
 
-    @IBAction func CheckMark(_ sender: Any) {   }
+   
     @IBOutlet weak var LabelTitle: UILabel!
     @IBOutlet weak var label_description: UILabel!
+    @IBOutlet weak var Button: UIButton!
     
+    @IBAction func ButtonDone(_ sender: Any) {
+        buttonClickedHandler?()
+        
+
+    }
 }
