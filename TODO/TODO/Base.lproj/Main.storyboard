@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,16 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fNs-7m-vUm">
-                                <rect key="frame" x="44" y="75" width="341" height="706"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fNs-7m-vUm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ID" id="beY-Rz-MRc" customClass="TableViewCell" customModule="TODO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="341" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beY-Rz-MRc" id="ZLV-vM-JHp">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sll-ZL-mQl">
@@ -63,9 +62,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Giw-jB-tan">
-                                <rect key="frame" x="305" y="32" width="89" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Giw-jB-tan">
+                                <rect key="frame" x="0.0" y="708" width="414" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
@@ -75,6 +73,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fNs-7m-vUm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="278-ji-aD7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Giw-jB-tan" secondAttribute="bottom" id="Aq5-JN-P7d"/>
+                            <constraint firstItem="fNs-7m-vUm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DNc-o9-yFM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fNs-7m-vUm" secondAttribute="trailing" id="aZi-X7-wQT"/>
+                            <constraint firstItem="Giw-jB-tan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gZz-uy-Alr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fNs-7m-vUm" secondAttribute="bottom" constant="100" id="k8i-UQ-Rac"/>
+                            <constraint firstItem="Giw-jB-tan" firstAttribute="top" secondItem="fNs-7m-vUm" secondAttribute="bottom" id="m93-Cb-lKa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Giw-jB-tan" secondAttribute="trailing" id="zQm-2h-uDx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4a5-Fl-2N1"/>
                     <connections>
@@ -83,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+            <point key="canvasLocation" x="-200" y="63"/>
         </scene>
         <!--Add Todo View Controller-->
         <scene sceneID="t7A-8F-JXL">
@@ -131,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oP8-Sk-wCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="145"/>
+            <point key="canvasLocation" x="571" y="54"/>
         </scene>
     </scenes>
     <resources>
