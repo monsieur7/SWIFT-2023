@@ -25,5 +25,18 @@ class AddTodoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func DoneButton(_ sender: UIButton) {
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ShowTodo"){
+            let mainViewController = segue.destination as? ViewController;
+            let dataToAdd = Todo(title: TitleOutlet.text ?? "" , description: "", type: TodoType.DEVOIRS, dueDate: DueDate.date, date: Date());
+            mainViewController?.data.append(dataToAdd);
+        }
+    
+    }
+    @IBOutlet weak var TitleOutlet: UITextField!
+    
+    @IBOutlet weak var DueDate: UIDatePicker!
 }

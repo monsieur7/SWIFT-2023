@@ -24,10 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let testTodo = Todo(title: "Hello", description: "Hey", type: TodoType.DEVOIRS, dueDate: Date(), date: Date());
-        data.append(testTodo);
-        data.append(testTodo);
-        
+       
         self.tableview.dataSource = self;
     }
 
