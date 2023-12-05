@@ -69,14 +69,23 @@
                                     <segue destination="yiJ-8a-CPb" kind="showDetail" id="hES-fl-DaO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN0-Qu-TYG">
+                                <rect key="frame" x="0.0" y="706" width="414" height="22"/>
+                                <state key="normal" image="delete.right" catalog="system">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fNs-7m-vUm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="278-ji-aD7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aN0-Qu-TYG" secondAttribute="trailing" id="2Vr-rp-AZ6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Giw-jB-tan" secondAttribute="bottom" id="Aq5-JN-P7d"/>
                             <constraint firstItem="fNs-7m-vUm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DNc-o9-yFM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aN0-Qu-TYG" secondAttribute="bottom" constant="80" id="OFB-RF-6LH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fNs-7m-vUm" secondAttribute="trailing" id="aZi-X7-wQT"/>
+                            <constraint firstItem="aN0-Qu-TYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g0m-3f-iT6"/>
                             <constraint firstItem="Giw-jB-tan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gZz-uy-Alr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fNs-7m-vUm" secondAttribute="bottom" constant="100" id="k8i-UQ-Rac"/>
                             <constraint firstItem="Giw-jB-tan" firstAttribute="top" secondItem="fNs-7m-vUm" secondAttribute="bottom" id="m93-Cb-lKa"/>
@@ -90,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-200" y="63"/>
+            <point key="canvasLocation" x="-200.00000000000003" y="62.946428571428569"/>
         </scene>
         <!--Add Todo View Controller-->
         <scene sceneID="t7A-8F-JXL">
@@ -142,9 +151,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="delete.right" catalog="system" width="128" height="104"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
