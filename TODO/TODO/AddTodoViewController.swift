@@ -26,11 +26,11 @@ class AddTodoViewController: UIViewController {
     }
     */
     @IBAction func DoneButton(_ sender: UIButton) {
-        
+        //do nothing for now, everything is in the prepare function
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ShowTodo"){
-            let mainViewController = segue.destination as? ViewController;
+            
             
             
             
