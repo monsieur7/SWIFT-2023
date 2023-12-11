@@ -28,9 +28,6 @@
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nKm-ga-BX5">
                                 <rect key="frame" x="0.0" y="423" width="414" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="DatePicker:" destination="gbf-v1-dF6" eventType="valueChanged" id="QDT-u1-PRP"/>
-                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-Ec-vet">
                                 <rect key="frame" x="259" y="16" width="155" height="30"/>
@@ -58,6 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Iq5-qe-YZt"/>
                     <connections>
+                        <outlet property="DatePicker" destination="nKm-ga-BX5" id="AET-Ej-Xqh"/>
                         <outlet property="DescriptionEdit" destination="Fmf-fI-FbI" id="WlX-8c-AVE"/>
                         <outlet property="TitleEdit" destination="ecM-8I-xEO" id="gt3-XX-hph"/>
                     </connections>
