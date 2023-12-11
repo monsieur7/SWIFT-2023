@@ -29,8 +29,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         cell.buttonDeleteHandler = { [weak self] in //
             if tableView.indexPath(for: cell) != nil {
+                print(indexPath.row);
                 self?.data.remove(at: indexPath.row);
                 self?.tableview.deleteRows(at: [indexPath], with: .fade);
+                self?.saveDatas();
         }
         }
         
@@ -59,7 +61,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
 
-    
+    func saveDatas(){
+        
+        do {
+            let encodedData = try JSONEncoder().encode(data)
+            UserDefaults.standard.set(encodedData, forKey: "TodoDatas"); //save data to database
+        } catch {
+            print("Error encoding data: \(error)")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -79,6 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         })
         self.tableview.dataSource = self;
         self.tableview.delegate = self;
+        
     }
 
     
