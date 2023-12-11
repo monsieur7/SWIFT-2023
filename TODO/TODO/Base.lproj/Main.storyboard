@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYH-gd-YsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2252.1739130434785" y="172.76785714285714"/>
+            <point key="canvasLocation" x="-2538" y="103"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="73"/>
+            <point key="canvasLocation" x="-1091" y="-234"/>
         </scene>
         <!--Add Todo View Controller-->
         <scene sceneID="t7A-8F-JXL">
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oP8-Sk-wCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571" y="54"/>
+            <point key="canvasLocation" x="509" y="65"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
