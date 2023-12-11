@@ -59,8 +59,7 @@ class EditSingularViewController: UIViewController {
    
     @IBOutlet weak var DescriptionEdit: UITextField!
     @IBOutlet weak var TitleEdit: UITextField!
-    @IBAction func checkmark(_ sender: Any) {
-    }
+    @IBAction func checkmark(_ sender: Any) {}
     
     
     @IBAction func confirm_change(_ sender: Any) {

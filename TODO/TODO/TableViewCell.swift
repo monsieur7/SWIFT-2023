@@ -30,9 +30,8 @@ class TableViewCell: UITableViewCell {
     @IBAction func DeleteButton(_ sender: UIButton) {
         buttonDeleteHandler?()
     }
+    
     @IBAction func ButtonPlus(_ sender: Any) {
         buttonClickedHandler?()
-
-
     }
 }
