@@ -30,6 +30,21 @@ class EditSingularViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = data[self.indexCell.row];
+        cell.description = DescriptionEdit.text ?? "";
+        cell.title = TitleEdit.text ?? "" ;
+        cell.date = DatePicker.date ;
+        
+        if(segue.identifier == "DataChanged"){ // load index path to edit View Controller
+            do {
+                let encodedData = try JSONEncoder().encode(data)
+                UserDefaults.standard.set(encodedData, forKey: "TodoDatas"); //save data to database
+            } catch {
+                print("Error encoding data: \(error)")
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

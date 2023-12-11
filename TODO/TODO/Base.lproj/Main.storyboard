@@ -22,7 +22,7 @@
                                 <state key="normal" title="confirm change"/>
                                 <connections>
                                     <action selector="confirm_change:" destination="gbf-v1-dF6" eventType="touchUpInside" id="dlT-Eu-9Nb"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="K1w-EW-qoJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="DataChanged" id="K1w-EW-qoJ"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nKm-ga-BX5">
