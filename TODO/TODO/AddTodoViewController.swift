@@ -40,7 +40,7 @@ class AddTodoViewController: UIViewController {
             
             if let encodedData = UserDefaults.standard.data(forKey: "TodoDatas") {
                 do {
-                    let decodedData = try JSONDecoder().decode([Todo].self, from: encodedData)
+                let decodedData = try JSONDecoder().decode( [Todo].self, from: encodedData)
                     data = decodedData
                 } catch {
                     print("Error decoding data: \(error)")

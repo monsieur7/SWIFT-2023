@@ -67,7 +67,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "DataTransfer"){ // load index path to edit View Controller
             let  destinationViewController = segue.destination as? EditSingularViewController;
-            destinationViewController?.indexCell = tableview.indexPath(for: sender as! TableViewCell)!
+            let buttonSender = sender as! UIButton;
+            let pos = buttonSender.convert(CGPoint.zero, to: self.tableview);
+            let indexPath = self.tableview.indexPathForRow(at:pos)
+            destinationViewController?.indexCell = indexPath!;
             
         }
     }

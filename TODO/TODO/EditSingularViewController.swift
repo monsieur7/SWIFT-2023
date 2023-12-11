@@ -11,6 +11,7 @@ class EditSingularViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(indexCell);
         let index = indexCell.row;
         //loading data
         if let encodedData = UserDefaults.standard.data(forKey: "TodoDatas") {
