@@ -65,8 +65,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableview: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == ""){
-            let  destinationViewController = segue.destination;
+        if(segue.identifier == "DataTransfer"){
+            let  destinationViewController = segue.destination as? EditSingularViewController;
+            destinationViewController?.indexCell = tableview.indexPath(for: sender as TableViewCell)
             
         }
     }
