@@ -21,27 +21,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         
-        cell.buttonClickedHandler = { [weak self] in
+        cell.buttonClickedHandler = { [weak self] in //
             // Handle the button click in your view controller
             if tableView.indexPath(for: cell) != nil {
-                // Do something with indexPath or perform any action needed
-                self!.data[indexPath.row].done = !self!.data[indexPath.row].done;
-                
-                var tickImage = UIImage();
-                if(self!.data[indexPath.row].done == true){
-                    tickImage = UIImage(systemName: "checkmark.circle.fill")! // Replace "checkmark.circle.fill" with the desired highlighted system image name
-                }
-                else {
-                    tickImage = UIImage(systemName: "checkmark.circle")! // Replace "checkmark.circle.fill" with the desired highlighted system image name
-                }
-               
-                cell.Button.setImage(tickImage, for: .normal)
-                
               
-            }
         }
-        
-      
+        }
+        cell.buttonDeleteHandler = { [weak self] in //
+            if tableView.indexPath(for: cell) != nil {
+                self?.data.remove(at: indexPath.row);
+                self?.tableview.deleteRows(at: [indexPath], with: .fade);
+        }
+        }
         
         return cell;
     }
@@ -51,6 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //loading data
         if let encodedData = UserDefaults.standard.data(forKey: "TodoDatas") {
             
             do {
@@ -60,6 +52,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print("Error decoding data: \(error)")
             }
         }
+        //sorting datas
+        data.sort (by: { (data1, data2) -> Bool in
+             data1.date < data2.date
+        })
         self.tableview.dataSource = self;
         self.tableview.delegate = self;
     }
