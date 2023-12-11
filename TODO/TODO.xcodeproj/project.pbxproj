@@ -16,6 +16,7 @@
 		8479ACF72B1635C2007FB310 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479ACF62B1635C2007FB310 /* Todo.swift */; };
 		8479AD0D2B164A32007FB310 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479AD0C2B164A32007FB310 /* AddTodoViewController.swift */; };
 		B6174F932B163BCF00CF7A26 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6174F922B163BCF00CF7A26 /* TableViewCell.swift */; };
+		D6C29B772B273AD000374CB7 /* EditSingularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C29B762B273AD000374CB7 /* EditSingularViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8479ACF62B1635C2007FB310 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		8479AD0C2B164A32007FB310 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		B6174F922B163BCF00CF7A26 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D6C29B762B273AD000374CB7 /* EditSingularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSingularViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8479ACE22B16344B007FB310 /* SceneDelegate.swift */,
 				8479ACE42B16344B007FB310 /* ViewController.swift */,
 				8479AD0C2B164A32007FB310 /* AddTodoViewController.swift */,
+				D6C29B762B273AD000374CB7 /* EditSingularViewController.swift */,
 				8479ACE62B16344B007FB310 /* Main.storyboard */,
 				8479ACE92B163452007FB310 /* Assets.xcassets */,
 				8479ACEB2B163452007FB310 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				8479ACE32B16344B007FB310 /* SceneDelegate.swift in Sources */,
 				8479AD0D2B164A32007FB310 /* AddTodoViewController.swift in Sources */,
 				8479ACF72B1635C2007FB310 /* Todo.swift in Sources */,
+				D6C29B772B273AD000374CB7 /* EditSingularViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

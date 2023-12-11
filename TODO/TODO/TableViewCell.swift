@@ -23,16 +23,13 @@ class TableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    
-
-   
     @IBOutlet weak var LabelTitle: UILabel!
     @IBOutlet weak var label_description: UILabel!
     @IBOutlet weak var Button: UIButton!
     
     @IBAction func ButtonDone(_ sender: Any) {
         buttonClickedHandler?()
-        
+
 
     }
 }

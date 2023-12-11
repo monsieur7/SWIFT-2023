@@ -31,9 +31,6 @@ class AddTodoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ShowTodo"){
             let mainViewController = segue.destination as? ViewController;
-            
-            
-            
             let dataToAdd = Todo(title: TitleOutlet.text ?? "" , description: "", type: TodoType.DEVOIRS, dueDate: DueDate.date, date: Date());
             
             var data:[Todo] = [];
@@ -57,6 +54,7 @@ class AddTodoViewController: UIViewController {
         }
     
     }
+    
     @IBOutlet weak var TitleOutlet: UITextField!
     
     @IBOutlet weak var DueDate: UIDatePicker!
