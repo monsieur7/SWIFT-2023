@@ -6,8 +6,11 @@
 //
 
 import Foundation
-enum TodoType: String, Codable {
+enum TodoType: String, Codable, CaseIterable {
     case DEVOIRS;
+    case DORMIR;
+    case MANGER;
+    case AUTRES;
     
 }
 class Todo : Codable{
