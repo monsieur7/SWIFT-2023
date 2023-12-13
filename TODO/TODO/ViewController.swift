@@ -45,6 +45,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell;
     }
+    /*
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return data.count;
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+           let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+           view.backgroundColor =  colorLiteral(red: 1, green: 0.3653766513, blue: 0.1507387459, alpha: 1)
+             
+           let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 40))
+           lbl.font = UIFont.systemFont(ofSize: 20)
+           lbl.text = mobileBrand[section].brandName
+           view.addSubview(lbl)
+           return view
+         }
+    */
+
+    //use tableviewDatasource
+    
+    //func tableView(UITableView, numberOfRowsInSection: Int) -> Int
+
     
 
     func saveDatas(){
