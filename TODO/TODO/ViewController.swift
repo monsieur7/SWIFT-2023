@@ -48,7 +48,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if(dataCell.type != self.categorySelected){
             cell.isHidden = true;
         }
-        
+        if !filteredItems.contains(dataCell) { // not in filtered Items list : hid the cell !
+                cell.isHidden = true
+            }
         return cell;
     }
     /*

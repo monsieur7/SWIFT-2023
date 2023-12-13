@@ -13,7 +13,7 @@ enum TodoType: String, Codable, CaseIterable {
     case AUTRES;
     
 }
-class Todo : Codable{
+class Todo : Codable, Equatable{
     
     var title: String;
     var description: String;
@@ -43,6 +43,10 @@ class Todo : Codable{
         self.done = false;
         self.sectionNumber = 0;
     }
+    static func == (lhs: Todo, rhs: Todo) -> Bool {
+           // Implement your equality comparison logic here
+        return lhs.title == rhs.title;
+       }
     
     
     
