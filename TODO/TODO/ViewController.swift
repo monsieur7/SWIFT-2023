@@ -120,6 +120,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
         }
     }
+    var filteredItems:[Todo] = [];
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredItems = data.filter { $0.title.lowercased().contains(searchText.lowercased()) };
+        self.tableview.reloadData();
+        }
+    
+    func tableView_search(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredItems.count
+    }
+
+    func tableView_search(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
+        let item = filteredItems[indexPath.row]
+        cell.textLabel?.text = item.title
+        return cell
+    }
    
     var data:[Todo] = [];
     var HeaderTitle:[String] = ["Today","Tomorrow","This Week","Others"];
