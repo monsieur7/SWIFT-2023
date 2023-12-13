@@ -34,8 +34,8 @@ class EditSingularViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = data[self.indexCell.row];
         cell.description = DescriptionEdit.text ?? "";
-        cell.title = TitleEdit.text ?? "" ;
-        cell.date = DatePicker.date ;
+        cell.title = TitleEdit.text ?? "";
+        cell.dueDate = DatePicker.date;
         
         if(segue.identifier == "DataChanged"){ // load index path to edit View Controller
             do {

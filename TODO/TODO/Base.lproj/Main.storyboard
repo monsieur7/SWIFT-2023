@@ -19,7 +19,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA4-XF-gle">
                                 <rect key="frame" x="0.0" y="778" width="414" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="confirm change"/>
+                                <state key="normal" title="Confirm Change"/>
                                 <connections>
                                     <action selector="confirm_change:" destination="gbf-v1-dF6" eventType="touchUpInside" id="dlT-Eu-9Nb"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="DataChanged" id="K1w-EW-qoJ"/>
@@ -29,14 +29,6 @@
                                 <rect key="frame" x="0.0" y="423" width="414" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-Ec-vet">
-                                <rect key="frame" x="259" y="16" width="155" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="done"/>
-                                <connections>
-                                    <action selector="checkmark:" destination="gbf-v1-dF6" eventType="touchUpInside" id="UI9-Xm-9Bf"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecM-8I-xEO">
                                 <rect key="frame" x="20" y="0.0" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYH-gd-YsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="-1116"/>
+            <point key="canvasLocation" x="442.02898550724643" y="-1116.2946428571429"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -208,7 +200,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vSS-dw-6Iv"/>
+        <segue reference="K1w-EW-qoJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="eye.fill" catalog="system" width="128" height="78"/>

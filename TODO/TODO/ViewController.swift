@@ -132,7 +132,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             else if(Calendar.current.isDateInTomorrow(d.dueDate)){
                 d.sectionNumber = 1;
             
-            } else if Calendar.current.isDate(d.dueDate, equalTo: Date(), toGranularity: .weekOfYear) {
+            } else if Calendar.current.isDate(d.dueDate, equalTo: Date(), toGranularity: .weekOfYear) { // if d is in the same week as today 
                    d.sectionNumber = 2
             }
             else{
