@@ -7,13 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.filter { $0.sectionNumber == section }.count // return how many Todos are in a section
 
         
     }
     
+    @IBOutlet weak var searchBar: UISearchBar!
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.HeaderTitle[section];
     }
@@ -48,7 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if(dataCell.type != self.categorySelected){
             cell.isHidden = true;
         }
-        if !filteredItems.contains(dataCell) { // not in filtered Items list : hid the cell !
+        if !filteredItems.contains(dataCell) && !(searchBar.text?.isEmpty ?? true) { // not in filtered Items list : hid the cell !
                 cell.isHidden = true
             }
         return cell;
@@ -109,6 +110,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         self.tableview.dataSource = self;
         self.tableview.delegate = self;
+        self.searchBar.delegate = self;
         
     }
 
@@ -127,6 +129,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     var filteredItems:[Todo] = [];
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredItems = data.filter { $0.title.lowercased().contains(searchText.lowercased()) };
         self.tableview.reloadData();
@@ -136,15 +139,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return filteredItems.count
     }
 
-    func tableView_search(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
-        let item = filteredItems[indexPath.row]
-        cell.textLabel?.text = item.title
-        return cell
-    }
+   
    
     var data:[Todo] = [];
     var HeaderTitle:[String] = ["Today","Tomorrow","This Week","Others"];
+    
     var categorySelected:TodoType = TodoType.DEVOIRS;
     func addSectionData(){
         for d in data {
