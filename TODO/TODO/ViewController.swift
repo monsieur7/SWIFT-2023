@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return(data.count) // a revoir
+        return data.filter { $0.sectionNumber == section }.count // return how many Todos are in a section
+
+        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -90,10 +92,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print("Error decoding data: \(error)")
             }
         }
-        //sorting datas
-        data.sort (by: { (data1, data2) -> Bool in
-             data1.date < data2.date
-        })
+       
+        addSectionData();
+        data.sort { (todo1, todo2) -> Bool in
+            if todo1.sectionNumber != todo2.sectionNumber {
+                return todo1.sectionNumber < todo2.sectionNumber
+            } else {
+                return todo1.dueDate < todo2.dueDate
+            }
+        }
         self.tableview.dataSource = self;
         self.tableview.delegate = self;
         
@@ -115,7 +122,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
    
     var data:[Todo] = [];
-    var HeaderTitle:[String] = ["Today","Tomorrow","The next wee","Others"];
-   
+    var HeaderTitle:[String] = ["Today","Tomorrow","This Week","Others"];
+    func addSectionData(){
+        for d in data {
+            print(d.dueDate);
+            if(Calendar.current.isDateInToday(d.dueDate)){
+                d.sectionNumber = 0;
+            }
+            else if(Calendar.current.isDateInTomorrow(d.dueDate)){
+                d.sectionNumber = 1;
+            
+            } else if Calendar.current.isDate(d.dueDate, equalTo: Date(), toGranularity: .weekOfYear) {
+                   d.sectionNumber = 2
+            }
+            else{
+                d.sectionNumber = 3;
+            }
+            
+        }
+    }
+    
+
 }
 
