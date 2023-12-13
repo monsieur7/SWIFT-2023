@@ -45,6 +45,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         }
         
+        if(dataCell.type != self.categorySelected){
+            cell.isHidden = true;
+        }
+        
         return cell;
     }
     /*
@@ -123,6 +127,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
    
     var data:[Todo] = [];
     var HeaderTitle:[String] = ["Today","Tomorrow","This Week","Others"];
+    var categorySelected:TodoType = TodoType.DEVOIRS;
     func addSectionData(){
         for d in data {
             print(d.dueDate);
