@@ -9,7 +9,14 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return(data.count)
+        return(data.count) // a revoir
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.HeaderTitle[section];
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.HeaderTitle.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,8 +93,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
    
-    var data:[Todo] = []
- 
+    var data:[Todo] = [];
+    var HeaderTitle:[String] = ["Today","Tomorrow","The next wee","Others"];
    
 }
 
